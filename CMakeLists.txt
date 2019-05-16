@@ -1,8 +1,8 @@
 # @author Shin'ichiro Nakaoka
 
-option(BUILD_EXT_GRXUI_PLUGIN "Building the GrxUI plugin" OFF)
+option(BUILD_GRXUI_PLUGIN "Building the GrxUI plugin" OFF)
 
-if(NOT BUILD_EXT_GRXUI_PLUGIN)
+if(NOT BUILD_GRXUI_PLUGIN)
   return()
 
 elseif(BUILD_BOOST_PYTHON_MODULES)
