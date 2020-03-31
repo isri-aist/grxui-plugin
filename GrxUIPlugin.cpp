@@ -26,7 +26,7 @@ Action* importGrxUICheck;
 
 bool GrxUIPlugin::isActive()
 {
-    return isActive_;
+    return ::isActive_;
 }
 
 
@@ -41,7 +41,7 @@ bool GrxUIPlugin::initialize()
 {
     GrxUIMenuView::initializeClass(this);
 
-    isActive_ = true;
+    ::isActive_ = true;
     
     MenuManager& mm = menuManager();
     mm.setPath("/Options").setPath("GrxUI");
@@ -77,7 +77,7 @@ void GrxUIPlugin::onImportGrxUICheckToggled(bool on, bool doWriteConfig)
 
 bool GrxUIPlugin::finalize()
 {
-    isActive_ = false;
+    ::isActive_ = false;
     return true;
 }
 
